@@ -1,0 +1,63 @@
+semester,type,course_num,course_name,credits,score
+1091,required,AP1002,General Atmospheric Sciences,1,61.00
+1091,required,AP1015,Introduction to Atmospheric Science Research,2,70.00
+1091,required,AP2049,Computer Programming and GraphicsⅠ,2,67.00
+1091,required,CL0201Y,Chinese (B): Chinese writing,2,85.00
+1091,required,LN1015B,Freshman English: Listening and Speaking,2,61.00
+1091,required,MA1003A,Calculus,3,58.00
+1091,required,PH1003G,General Physics Laboratory,1,77.00
+1091,required,PH1031C,General Physics A,3,73.00
+1091,general,CC0312,Materials for Better Life,2,69.00
+1091,selected,AP1010,Introduction to Earth system Science,2,62.00
+1091,pe,PE10111,Freshman PE I,0,70.00
+1091,conduct,CR0001,Conduct,,85.00
+1091,service,SC0003H,Student Service-Learning,0,pass
+1092,required,AP1001,Introduction to Atmospheric Sciences,1,65.00
+1092,required,AP1006,Vector Analysis,2,66.00
+1092,required,AP2050,Computer Programming and GraphicsⅡ,2,61.00
+1092,required,CL0127C,Chinese (A)：Readings of Selected Classical Chinese Novels,3,73.00
+1092,required,CM1006,General Chemistry,3,81.00
+1092,required,CM1008A,General Chemistry Laboratory,1,80.00
+1092,required,LN1018B,Freshman English: Reading and Writing,2,79.00
+1092,required,MA1004A,Calculus,3,74.00
+1092,required,PH1032C,General Physics A,3,67.00
+1092,pe,PE10221,Freshman PE Ⅱ,0,78.00
+1092,conduct,CR0001,Conduct,,85.00
+1092,service,SC0004H,Student Service-Learning,0,pass
+1101,required,AP2007,Applied Mathematics,3,90.00
+1101,required,AP2039,Atmospheric Instrumentation and Observation Ⅰ,3,75.00
+1101,required,CE1001,Introduction to Computer Science Ⅰ,3,100.00
+1101,required,CE1003B,Introduction to Computer Science LabⅠ,1,69.00
+1101,general,CC0203,Introductory Astronomy,3,72.00
+1101,general,CC0423,Introduction to Business,2,93.00
+1101,general,GS2156,SQ(Spiritual Quotient)—Beyond IQ and EQ,2,90.00
+1101,general,GS3074,International Organization,2,72.00
+1101,selected,LN0065B,French (I) A,3,86.00
+1101,selected,LN2923,Selected Reading on English Magazines,2,97.00
+1101,pe,PE2151,Golf I,0,71.00
+1101,conduct,CR0001,Conduct,,85.00
+1102,required,AP2008,Applied Mathematics,3,66.00
+1102,required,AP2010,Fluid Mechanics,3,80.00
+1102,required,CE1002,Introduction to Computer Science Ⅱ,3,98.00
+1102,required,CE1004A,Introduction to Computer Science ⅡLab,1,100.00
+1102,required,CE2008,Digital Design,3,67.00
+1102,required,CE2010B,Experiment of Digital Design,1,81.00
+1102,required,CE3005B,Algorithmics,3,65.00
+1102,general,GS3073B,Introduction to Artificial Intelligence,3,91.00
+1102,general,GS4519A,Introduction to machine learning,2,100.00
+1102,general,GS4521,Artificial Intelligence and Commercial Applications,2,89.00
+1102,selected,LN0066,French (I) B,3,83.00
+1102,summer,MA10039,Calculus,3,50.00
+1102,pe,PE2051A,Basketball I,0,91.00
+1102,conduct,CR0001,Conduct,,85.00
+1111,required,AP3001,Atmospheric Dynamics,3,withdraw
+1111,required,CE2002A,Data Structure,3,65.00
+1111,required,CE2012,Assembly Language and System Programming,3,86.00
+1111,required,MA1003A,Calculus,3,51.00
+1111,selected,AP2042,Introduction to Environmental Chemistry of The Earth,2,87.00
+1111,selected,AP3003,Atmospheric Physics I,3,67.00
+1111,selected,AP3021,Numerical Analysis Ⅰ,3,77.00
+1111,selected,AP4063,Weather and Artificial Intelligence Ⅰ,3,87.00
+1111,selected,LN0025C,Japanese(I) A,3,73.00
+1111,pe,PE2121B,Tennis I,0,78.00
+1111,conduct,CR0001,Conduct,,87.00
