@@ -55,19 +55,32 @@ class Scaler:
     ]
     
     course_credit = 0
+    score = 0.0
 
 
     def __init__(self, data_path) -> None:
 
         self.data_path = data_path
-        self.__show_welcome_words()
+        self.__show_project_intro()
         self.__pre_solving_data()
 
 
-    def __show_welcome_words(self, ) -> None:
+    def __show_project_intro(self, ) -> None:
 
-        print("Intro to the project:")
-        print("There are some functions, which do you want to do?")
+        print("A brief summary of the project:")
+        print("This project will be undertaken during my winter break in 2023.")
+        # text = "The primary aim of this project is to develop a tool to scale GPA scores at my university, as the school's current search system only displays the unadjusted scores. Additionally, this project will serve as an opportunity to enhance my understanding of object-oriented programming using the Python language."
+        # width = 50
+
+        # for i in range(0, len(text), width):
+        #     print(text[i:i+width])
+
+        print('The primary aim of this project is to develop a tool')
+        print('to scale GPA scores at my university, as the school\'s')
+        print('current search system only displays the unadjusted scores.')
+        print('Additionally, this project will serve as an opportunity ')
+        print('to enhance my understanding of object-oriented programming')
+        print('using the Python language.')
         print()
 
     def __pre_solving_data(self,) -> list:
@@ -87,15 +100,20 @@ class Scaler:
         self._score_solving(self.df, 5)
         self._gpa_scaler_mechanism()
 
-        # self._show_data_frame()
+        # self._show_df_roughly()
         
         return self.df
 
-    def _show_data_frame(self, ) -> None:
+    def _show_df_roughly(self, ) -> None:
 
         for i in range(0, len(self.df)):
             print(self.df[i])
 
+    def _decide_what_to_do(self, command) -> None:
+
+        return
+
+    
     def _score_solving(self, df, index) -> list:
 
         for i in range(0, len(df)):
@@ -136,8 +154,39 @@ class Scaler:
                 self.df[i][6] = 'NaN'
                 self.df[i][7] = 'NaN'
 
-        
 
+    def show_GPA_scaler_mechanism(self, ) -> None:
+
+        print("The GPA scaler rule in NCU:")
+        print()
+        print('+----------------------+')
+        print("|Range    |Rank |Scale |")
+        print("|---------|-----|------|")
+        print("|90 ~ 100 | A+  |4.3   |")
+        print("|85 ~ 89  | A   |4.0   |")
+        print("|80 ~ 84  | A-  |3.7   |")
+        print("|77 ~ 79  | B+  |3.3   |")
+        print("|73 ~ 76  | B   |3.0   |")
+        print("|70 ~ 72  | B-  |2.7   |")
+        print("|67 ~ 69  | C+  |2.3   |")
+        print("|63 ~ 66  | C   |2.0   |")
+        print("|60 ~ 62  | C-  |1.7   |")
+        print("|50 ~ 59  | D   |1.0   |")
+        print("|1 ~ 49   | E   |0.0   |")
+        print("|0        | X   |0.0   |")
+        print('+----------------------+')
+    
+    def get_scaler_score(self, ) -> float:
+
+        self.score = self._count_average_GPA(self.df)
+        self._show_scaler_score(self.score)
+
+        return self.score
+
+
+    def _show_scaler_score(self, score) -> None:
+
+        print('Your scaler score in the university:', score)
 
     def get_semester_info(self, semester) -> None:
 
@@ -179,18 +228,18 @@ class Scaler:
                 self.searching_semester[i][7]))
         print('------------------------------------------------------')
         print()
-        search_gpa = self._count_average_GPA()
+        search_gpa = self._count_average_GPA(self.searching_semester)
         print('Your average GPA for this semester we have gotten:', search_gpa)
 
-    def _count_average_GPA(self, ) -> float:
+    def _count_average_GPA(self, target_semester) -> float:
 
         current_credits = 0
         total_scale = 0.0
 
-        for i in range(1, len(self.searching_semester)):
-            if (self.searching_semester[i][7] != 'NaN' and self.searching_semester[i][4] != ''):
-                credits = int(self.searching_semester[i][4])
-                scale = float(self.searching_semester[i][7])
+        for i in range(1, len(target_semester)):
+            if (target_semester[i][7] != 'NaN' and target_semester[i][4] != ''):
+                credits = int(target_semester[i][4])
+                scale = float(target_semester[i][7])
                 current_credits += credits
                 total_scale += scale * credits
             
@@ -270,6 +319,7 @@ class Scaler:
 
 
 
+
     def show_ATM_graduation_threshold(self, ) -> None:
 
         print("The Department of Atmospheric Science Graduation Threshold in the NCU:")
@@ -321,27 +371,22 @@ class Scaler:
 
         return self.pass_credits
 
-    def get_average_score(self, ) -> int:
+    def get_original_score(self, ) -> int:
         
         total = 0
         count = 0
         for i in range(0, len(self.df)):
 
             try:
-
                 total += self.df[i][5]
                 count += 1
-
             except:
-
                 pass
-
             finally:
-
                 pass
         
         self.average = total / count
-        print(self.average)
+        self.average = (round(self.average, 2))
+        print('Your original score in the university:', self.average)
 
         return self.average
-
